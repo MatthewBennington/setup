@@ -20,6 +20,10 @@ Plugin 'ap/vim-css-color'
 Plugin 'airblade/vim-gitgutter'
 Plugin 't9md/vim-choosewin'
 Plugin 'rafi/vim-tinyline'
+Plugin 'keith/swift.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-sensible'
+Plugin 'rhysd/vim-crystal'
 
 "/Added by Matt
 
@@ -59,6 +63,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 syntax on
 set number
+set relativenumber
+set ruler
 set tabstop=4
 set shiftwidth=4
 colorscheme solarized
