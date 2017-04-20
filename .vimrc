@@ -24,6 +24,8 @@ Plugin 'keith/swift.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-sensible'
 Plugin 'rhysd/vim-crystal'
+Plugin 'tpope/vim-markdown'
+Plugin 'vim-syntastic/syntastic'
 
 "/Added by Matt
 
@@ -61,6 +63,23 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Syntastic stuff:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list = 1
+
+let g:syntastic_cpp_checkers=['gcc', 'cppcheck']
+
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+" /Syntastic stuff
 syntax on
 set number
 set relativenumber
@@ -69,4 +88,7 @@ set tabstop=4
 set shiftwidth=4
 colorscheme solarized
 autocmd BufNewFile *.html,*.htm,*.php source ~/.vim/ftplugin/htmltemplate.vim
+let g:ycm_show_diagnostics_ui = 0
 nmap  -  <Plug>(choosewin)
+set backspace=indent,eol,start
+let delimitMate_expand_cr=1
