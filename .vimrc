@@ -26,6 +26,9 @@ Plugin 'tpope/vim-sensible'
 Plugin 'rhysd/vim-crystal'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tmux-plugins/vim-tmux'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-rails'
 
 "/Added by Matt
 
@@ -74,9 +77,10 @@ let g:syntastic_check_on_wq=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 
 let g:syntastic_cpp_checkers=['gcc', 'cppcheck']
+let g:syntastic_crystal_checkers=['crystal']
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " /Syntastic stuff
@@ -86,9 +90,18 @@ set relativenumber
 set ruler
 set tabstop=4
 set shiftwidth=4
+set background=dark
 colorscheme solarized
 autocmd BufNewFile *.html,*.htm,*.php source ~/.vim/ftplugin/htmltemplate.vim
 let g:ycm_show_diagnostics_ui = 0
 nmap  -  <Plug>(choosewin)
 set backspace=indent,eol,start
 let delimitMate_expand_cr=1
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+nnoremap Q @q
