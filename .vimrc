@@ -105,3 +105,6 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 nnoremap Q @q
+set foldmethod=syntax
+set nofoldenable
+set mouse=""
