@@ -15,7 +15,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'andreimaxim/vim-io'
 Plugin 'adimit/prolog.vim'
-Plugin 'valloric/youcompleteme'
+Plugin 'ervandew/supertab'
 Plugin 'ap/vim-css-color'
 Plugin 'airblade/vim-gitgutter'
 Plugin 't9md/vim-choosewin'
@@ -90,6 +90,8 @@ set relativenumber
 set ruler
 set tabstop=4
 set shiftwidth=4
+set expandtab
+set shiftround
 set background=dark
 colorscheme solarized
 autocmd BufNewFile *.html,*.htm,*.php source ~/.vim/ftplugin/htmltemplate.vim
