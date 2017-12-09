@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-"
+
 "Added by Matt:
 
 Plugin 'tpope/vim-surround'
@@ -84,11 +84,14 @@ let g:syntastic_crystal_checkers=['crystal']
 
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " /Syntastic stuff
+"
+command Tex w | ! pdflatex %
 syntax on
 set number
 set relativenumber
 set ruler
 set tabstop=4
+set expandtab
 set shiftwidth=4
 set expandtab
 set shiftround
@@ -107,6 +110,6 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 nnoremap Q @q
-set foldmethod=syntax
+set foldmethod=indent
 set nofoldenable
 set mouse=""
