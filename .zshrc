@@ -21,6 +21,11 @@ bindkey "^[[A" history-beginning-search-backward-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[B" history-beginning-search-forward-end
 
+# Docker completion:
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+fpath=( /Users/Matt/.zsh/completion "${fpath[@]}" )
+
 # Replicates oh-my-zsh's case-insensitive completion.
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
@@ -33,6 +38,9 @@ PS1="%(?,%{$fg[green]%},%{$fg[red]%}) %% "
 RPS1="%{$fg[blue]%}%~%{$reset_color%} "
 
 # ALIASES
+
+# Docker stuff to make life less painfull.
+alias dkill="docker kill $(docker ps -aq)"
 
 # Set python commands to default to python3, because I would forget otherwise.
 alias python='python3'
@@ -74,6 +82,9 @@ function ascii()
 function pdf () {
 	cupsfilter $1 > "${1%.*}.pdf" 2> /dev/null
 }
+
+# Go?
+export GOPATH="$HOME/go"
 
 # Honestly not sure what this does, but it's probably here for a reason.
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
