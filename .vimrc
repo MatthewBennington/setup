@@ -86,6 +86,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " /Syntastic stuff
 "
 command Tex w | ! pdflatex %
+command Retag ! ctags -R .
 syntax on
 set number
 set relativenumber
