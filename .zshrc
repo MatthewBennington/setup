@@ -21,6 +21,9 @@ bindkey "^[[A" history-beginning-search-backward-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[B" history-beginning-search-forward-end
 
+# Set `cd` to behave like pushd
+setopt auto_pushd
+
 # Docker completion:
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
@@ -47,7 +50,6 @@ alias python='python3'
 alias pip='pip3'
 
 # Replicating oh-my-zsh features.
-alias cd='pushd'
 alias l='ls -la'
 
 # I almost never write c, and this catches stupid mistakes.
