@@ -9,4 +9,6 @@ __Does not work lol__
 2. Install zsh `brew install zsh`
 3. Install tmux `brew install tmux`
 4. Set zsh as your shelll `sudo echo "$(which zsh)" >> /etc/shells` & `chsh -s $(which zsh)`
-5. Use the config files from this repo
+5. Configure zsh
+  a. Install syntax highlighting `brew install zsh-syntax-highlighting`
+6. Use the config files from this repo
