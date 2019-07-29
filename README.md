@@ -9,7 +9,7 @@ __Does not work lol__
 2. Install zsh `brew install zsh`
 3. Install tmux `brew install tmux`
   a. Install tpm (tmux plugin manager) `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-  b. Open tmux and type `\`b` to install plugins.
+  b. Open tmux and type \`b to install plugins.
 4. Set zsh as your shelll `sudo echo "$(which zsh)" >> /etc/shells` & `chsh -s $(which zsh)`
 5. Configure zsh
   a. Install syntax highlighting `brew install zsh-syntax-highlighting`
