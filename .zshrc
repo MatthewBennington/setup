@@ -25,9 +25,9 @@ bindkey "^[[B" history-beginning-search-forward-end
 setopt auto_pushd
 
 # Docker completion:
-zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
-fpath=( /Users/Matt/.zsh/completion "${fpath[@]}" )
+#zstyle ':completion:*:*:docker:*' option-stacking yes
+#zstyle ':completion:*:*:docker-*:*' option-stacking yes
+#fpath=( /Users/Matt/.zsh/completion "${fpath[@]}" )
 
 # Replicates oh-my-zsh's case-insensitive completion.
 autoload -U compinit && compinit
@@ -43,17 +43,10 @@ RPS1="%{$fg[blue]%}%~%{$reset_color%} "
 # ALIASES
 
 # Docker stuff to make life less painfull.
-alias dkill="docker kill $(docker ps -aq)"
-
-# Set python commands to default to python3, because I would forget otherwise.
-alias python='python3'
-alias pip='pip3'
+#alias dkill="docker kill $(docker ps -aq)"
 
 # Replicating oh-my-zsh features.
 alias l='ls -la'
-
-# I almost never write c, and this catches stupid mistakes.
-alias gcc='g++'
 
 # Stuff I need in my path.
 export PATH=/usr/local/bin/:$PATH
@@ -67,7 +60,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Setting text editor.
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-alias vim=nvim
 
 # Fixing an issue I've encountered with homebrew.
 export HOMEBREW_NO_GITHUB_API=1
