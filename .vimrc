@@ -29,6 +29,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-rails'
+Plugin 'webdevel/tabulous'
 
 "/Added by Matt
 
